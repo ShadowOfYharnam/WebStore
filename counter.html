@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Store</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+<!-- JS below -->
+<script src="https://code.jquery.com/jquery-3.2.1.js" type="text/javascript"></script>
+<script src="js/counter.js" type="text/javascript"></script>
+<script src="js/purchase.js" type="text/javascript"></script>
+</head>
+
+<body>
+	
+	<header>
+        <nav class="navbar navbar-default">
+			<div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Location Page</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home </a></li>
+                    <li><a href="About.html">About</a></li>
+					<li><a href="counter.html">Purchase area</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+</header>
+<h1> Store Counter </h1>
+	<h3> Please browse our items that are available for purchase when you are ready to make a purchase, please, 
+    choose the item wished and add a amount that you wish to order. then when you are done hit confirm purchase.  </h3>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-7" >
+            <div id="products">
+            </div>
+		</div>
+
+        <div class="col-md-5" >
+            <div id="products">
+               <form action="javascript:addToOrder()" id="order_form">
+                   <select id="selectBox1"></select>
+                   <br />
+                   <br />
+                   <button type="submit" class="btn btn-default"> add to order </button>
+               </form>
+
+               <form action="javascript:submitOrder()" id="order_form2">
+                    <br />
+                   <div id="purchaseList"></div>
+                <button type="submit" class="btn btn-default"> submit order </button>
+               </form>
+            </div>
+		</div>
+	</div>
+</div>
+<!-- contains the form for ordering items that is placed to the right of the list of items. -->
+</body>
+</html>
+
+

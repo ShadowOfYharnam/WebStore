@@ -1,0 +1,11 @@
+#products{
+    text-align: justify;
+}
+p{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: floralwhite;
+}
+body{
+    background-color: lightslategray;
+}

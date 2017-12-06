@@ -19,5 +19,5 @@ function addToOrder() {
 }
 
 function submitPurchase(){
-window.location.replace("index.html");
+window.location.replace("https://shadowofyharnam.github.io/WebStore/index.html");
 }

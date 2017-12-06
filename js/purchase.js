@@ -1,5 +1,5 @@
 //contains the functions for the forms
-
+var totalPrice = 0;
 function addToOrder() {
     var selected = document.getElementById("selectBox1").value;
     var $p = $("<p></p>"); 
@@ -10,8 +10,9 @@ function addToOrder() {
 		$.each(data, function(i, e){
 			if(e.Name == selected){
                 price = e.price; 
-                $p.text(selected + " " + price);
-         }
+                totalPrice = totalPrice + e.price.subString(1);
+                $p.text(selected + " " + price + totalPrice);
+            }
 		});		
 	});
     $("#purchaseList").append($p);
@@ -19,5 +20,9 @@ function addToOrder() {
 }
 
 function submitPurchase(){
-window.location.replace("https://shadowofyharnam.github.io/WebStore/index.html");
+
+
+
+    //should change the window after the new things are in place
+    window.location.replace("https://shadowofyharnam.github.io/WebStore/index.html");
 }

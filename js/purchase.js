@@ -25,9 +25,8 @@ function addToOrder() {
 }
     
 function submitPurchase(){
-
-
-
+document.getElementById("purchase-confirmation").innerHTML=localStorage.purchaseDivs;
+    $("#purchaseDivs").text(" Thank you for Your purchase. Your total was: " + totalPrice);
     //should change the window after the new things are in place
     window.location.replace("https://shadowofyharnam.github.io/WebStore/index.html");
 }

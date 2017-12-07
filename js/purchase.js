@@ -4,7 +4,7 @@ function addToOrder() {
     var selected = document.getElementById("selectBox1").value;
     var $p = $("<p></p>");
     var $totalPrice = $("<p></p>"); 
-    var price = 15;
+    var price = 0;
     var fileName = "MOCK_DATA.json";
     //adds the price and name to a div below the button s well as total price math
 	$.getJSON(fileName, function(data){ 
@@ -26,6 +26,15 @@ function addToOrder() {
     
 function submitPurchase(){
 document.getElementById("purchase-confirmation").innerHTML=localStorage.purchaseDivs;
+var xhr = new XMLHttpRequest();
+xhr.open('GET', "https://shadowofyharnam.github.io/WebStore/index.html", true);
+xhr.responseType = 'document';
+xhr.send();
+xhr.onload = function(e) {  
+    var doc = e.target.responseXML;
+}
+var index = doc.getElementById("purchase-confirmation");
+
     $("#purchaseDivs").text(" Thank you for Your purchase. Your total was: " + totalPrice);
     //should change the window after the new things are in place
     window.location.replace("https://shadowofyharnam.github.io/WebStore/index.html");

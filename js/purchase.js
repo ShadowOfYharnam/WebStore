@@ -10,7 +10,6 @@ function addToOrder() {
 		$.each(data, function(i, e){
 			if(e.Name == selected){
                 price = e.price; 
-                var priceDBL = Number(price.replace(/[^0-9\.-]+/g,""));
                 totalPrice = totalPrice + priceDBL;
                 
                 

@@ -16,10 +16,8 @@ function addToOrder() {
 		});		
 	});
     $("#purchaseList").append($p);
-    console.log(totalPrice);
-
 }
-
+    console.log(totalPrice);
 function submitPurchase(){
 
 

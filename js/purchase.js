@@ -10,7 +10,7 @@ function addToOrder() {
 		$.each(data, function(i, e){
 			if(e.Name == selected){
                 price = e.price; 
-                totalPrice = totalPrice + price.subString(1);
+                totalPrice = totalPrice + price;
                 $p.text(selected + " " + price + totalPrice);
             }
 		});		

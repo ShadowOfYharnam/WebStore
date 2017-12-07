@@ -25,17 +25,7 @@ function addToOrder() {
 }
     
 function submitPurchase(){
-document.getElementById("purchase-confirmation").innerHTML=localStorage.purchaseDivs;
-var xhr = new XMLHttpRequest();
-xhr.open('GET', "https://shadowofyharnam.github.io/WebStore/index.html", true);
-xhr.responseType = 'document';
-xhr.send();
-xhr.onload = function(e) {  
-    var doc = e.target.responseXML;
-}
-var index = doc.getElementById("purchase-confirmation");
-
-    $("#purchaseDivs").text(" Thank you for Your purchase. Your total was: " + totalPrice);
-    //should change the window after the new things are in place
+    //alerts the total and a thank you for now till the page switching works correctly.
     window.location.replace("https://shadowofyharnam.github.io/WebStore/index.html");
+    alert(" Thank you for Your purchase. Your total was: " + totalPrice);
 }

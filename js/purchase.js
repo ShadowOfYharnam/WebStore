@@ -16,6 +16,7 @@ function addToOrder() {
             }
 		});		
 	});
+    //prints the total price and the name and price of a item
     $totalPrice.text("$" + totalPrice.toFixed(2));
     $("#purchaseList").append($p);
 

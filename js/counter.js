@@ -15,7 +15,7 @@ $(document).ready(function(){
                 counter = 0;
                 storage = "";
             }else{
-                storage = storage + "   " + e.Name + " " + e.price + "  ";
+                storage = storage + "   " + e.Name + " " + "$" + e.price + "  ";
                 counter +=1 
             }
 			

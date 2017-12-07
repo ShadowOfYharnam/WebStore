@@ -11,11 +11,12 @@ function addToOrder() {
 			if(e.Name == selected){
                 price = e.price; 
                 totalPrice = totalPrice + price;
-                $p.text(selected + " " + price + totalPrice);
+                $p.text(selected + " " + price);
             }
 		});		
 	});
     $("#purchaseList").append($p);
+    console.log(totalPrice);
 
 }
 

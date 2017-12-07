@@ -4,7 +4,7 @@ function addToOrder() {
     var selected = document.getElementById("selectBox1").value;
     var $p = $("<p></p>");
     var $totalPrice = $("<p></p>"); 
-    var price = 0;
+    var price = 15;
     var fileName = "MOCK_DATA.json";
     //adds the price and name to a div below the button s well as total price math
 	$.getJSON(fileName, function(data){ 

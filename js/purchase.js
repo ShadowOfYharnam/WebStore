@@ -2,22 +2,27 @@
 var totalPrice = 0;
 function addToOrder() {
     var selected = document.getElementById("selectBox1").value;
-    var $p = $("<p></p>"); 
+    var $p = $("<p></p>");
+    var $totalPrice = $("<p></p>"); 
     var price = "";
     var fileName = "MOCK_DATA.json";
-    //adds the price and name to a div below the button
+    //adds the price and name to a div below the button s well as total price math
 	$.getJSON(fileName, function(data){ 
 		$.each(data, function(i, e){
 			if(e.Name == selected){
                 price = e.price; 
                 totalPrice = totalPrice + price;
-                $p.text(selected + " " + price);
+                $p.text(selected + "  " +  "$" + price);
             }
 		});		
 	});
+    $totalPrice.text("$" + totalPrice.toFixed(2));
     $("#purchaseList").append($p);
+    //clears current total and updates the number
+    $("#total").empty();
+    $("#total").append($totalPrice);
 }
-    console.log(totalPrice);
+    
 function submitPurchase(){
 
 

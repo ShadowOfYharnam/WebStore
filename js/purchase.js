@@ -7,15 +7,19 @@ function addToOrder() {
     var price = 0;
     var fileName = "MOCK_DATA.json";
     //adds the price and name to a div below the button s well as total price math
-	$.getJSON(fileName, function(data){ 
-		$.each(data, function(i, e){
-			if(e.Name == selected){
-                price = e.price; 
-                totalPrice += price;
-                $p.text(selected + "  " +  "$" + price);
-            }
-		});		
-	});
+    var data = $.getJSON(fileName);
+    getPrice(data);
+    $p.text(selected + "  " +  "$" + price);
+
+	//$.getJSON(fileName, function(data){ 
+	//	$.each(data, function(i, e){
+	//		if(e.Name == selected){
+    //            price = e.price; 
+    //            totalPrice += price;
+    //            $p.text(selected + "  " +  "$" + price);
+    //        }
+	//	});		
+	//});
     //prints the total price and the name and price of a item
     $totalPrice.text("$" + totalPrice.toFixed(2));
     $("#purchaseList").append($p);
@@ -24,9 +28,18 @@ function addToOrder() {
     $("#total").empty();
     $("#total").append($totalPrice);
 }
+
+function getPrice(data) {
+    	$.each(data, function(i, e){
+			if(e.Name == selected){
+                price = e.price; 
+                totalPrice += price;
+             }
+        });
+}
     
 function submitPurchase(){
     //alerts the total and a thank you for now till the page switching works correctly.
     window.location.replace("https://shadowofyharnam.github.io/WebStore/index.html");
-    alert(" Thank you for Your purchase. Your total was: " + totalPrice);
+    alert(" Thank you for Your purchase. Your total was: $" + totalPrice);
 }

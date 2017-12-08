@@ -1,43 +1,31 @@
 //contains the functions for the forms
 var totalPrice = 0;
-var selected;
- var price = 0;
-
 function addToOrder() {
+    var selected = document.getElementById("selectBox1").value;
     var $p = $("<p></p>");
     var $totalPrice = $("<p></p>"); 
+    var price = 0;
     var fileName = "MOCK_DATA.json";
-    selected = document.getElementById("selectBox1").value;
     //adds the price and name to a div below the button s well as total price math
-    var data = $.getJSON(fileName);
-    getPrice(data);
-    $p.text(selected + "  " +  "$" + price);
-
-	//$.getJSON(fileName, function(data){ 
-	//	$.each(data, function(i, e){
-	//		if(e.Name == selected){
-    //            price = e.price; 
-    //            totalPrice += price;
-    //            $p.text(selected + "  " +  "$" + price);
-    //        }
-	//	});		
-	//});
-    //prints the total price and the name and price of a item
-    $totalPrice.text("$" + totalPrice.toFixed(2));
-    $("#purchaseList").append($p);
-
-    //clears current total and updates the number
-    $("#total").empty();
-    $("#total").append($totalPrice);
-}
-
-function getPrice(data) {
-    	$.each(data, function(i, e){
+	$.getJSON(fileName, function(data){ 
+		$.each(data, function(i, e){
 			if(e.Name == selected){
                 price = e.price; 
                 totalPrice += price;
-             }
-        });
+                $p.text(selected + "  " +  "$" + price);
+                
+
+                //prints the total price and the name and price of a item
+                $("#purchaseList").append($p);
+                $totalPrice.text("$" + totalPrice.toFixed(2));
+
+
+                 //clears current total and updates the number
+                 $("#total").empty();
+                 $("#total").append($totalPrice);
+            }
+		});		
+	});
 }
     
 function submitPurchase(){

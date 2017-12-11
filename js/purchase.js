@@ -30,7 +30,7 @@ function addToOrder() {
     
 function submitPurchase(){
     window.location.replace("https://shadowofyharnam.github.io/WebStore/index.html");
-    alert(" Thank you for Your purchase. Your total was: $" + totalPrice.toFixed(2));           
+    alert(" Thank you for your order. Your total was: $" + totalPrice.toFixed(2) + " and will be ready for pick up at the store.");           
     
     
 

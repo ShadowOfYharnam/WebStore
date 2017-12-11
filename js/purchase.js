@@ -17,7 +17,7 @@ function addToOrder() {
 
                 //prints the total price and the name and price of a item
                 $("#purchaseList").append($p);
-                $totalPrice.text("$" + totalPrice.toFixed(2));
+                $totalPrice.text("Your total is:$" + totalPrice.toFixed(2));
 
 
                  //clears current total and updates the number
@@ -30,7 +30,7 @@ function addToOrder() {
     
 function submitPurchase(){
     window.location.replace("https://shadowofyharnam.github.io/WebStore/index.html");
-    alert(" Thank you for Your purchase. Your total was: $" + totalPrice);           
+    alert(" Thank you for Your purchase. Your total was: $" + totalPrice.toFixed(2));           
     
     
 

@@ -29,8 +29,12 @@ function addToOrder() {
 }
     
 function submitPurchase(){
-
-    //alerts the total and a thank you for now till the page switching works correctly.
     window.location.replace("https://shadowofyharnam.github.io/WebStore/index.html");
-    alert(" Thank you for Your purchase. Your total was: $" + totalPrice);
+    alert(" Thank you for Your purchase. Your total was: $" + totalPrice);           
+    
+    
+
 }
+
+
+

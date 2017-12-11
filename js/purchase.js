@@ -29,10 +29,7 @@ function addToOrder() {
 }
     
 function submitPurchase(){
-    var message = document.getElementById("#purchaseMessage");
-    var $p = $("<p></p>");
-    $p.text("Thank you for Your purchase. Your total was: $" + totalPrice);
-    $("#purchaseMessage").append($p);
+
     //alerts the total and a thank you for now till the page switching works correctly.
     window.location.replace("https://shadowofyharnam.github.io/WebStore/index.html");
     alert(" Thank you for Your purchase. Your total was: $" + totalPrice);
